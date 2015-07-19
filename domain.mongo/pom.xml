@@ -1,14 +1,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.ee</groupId>
 	<artifactId>domain.mongo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<parent>
+		<groupId>com.ee</groupId>
+		<artifactId>pom</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../pom/pom.xml</relativePath>
+	</parent>
 	<properties>
-		<base.domain.version>${project.version}</base.domain.version>
+		<!-- <base.domain.version>${project.version}</base.domain.version>
 		<java.version>1.6</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding> -->
 		<org.springframework.security.version>4.0.1.RELEASE</org.springframework.security.version>
 	</properties>
 	<build>
@@ -27,8 +31,15 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.ee</groupId>
-			<artifactId>domain</artifactId>
-			<version>${base.domain.version}</version>
+			<artifactId>domain.impl</artifactId>
+			<version>${project.version}</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.ee</groupId>
+			<artifactId>core.impl</artifactId>
+			<version>${project.version}</version>
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
@@ -36,6 +47,19 @@
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-core</artifactId>
 			<version>${org.springframework.security.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<!-- Spring mongo and java mongo clients -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-mongodb</artifactId>
+			<version>${spring.data.mongodb.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+			<version>${mongodb.client.version}</version>
 			<scope>compile</scope>
 		</dependency>
 	</dependencies>

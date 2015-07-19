@@ -1,4 +1,4 @@
-package com.ee.domain;
+package com.ee.core;
 
 public interface PersistentObject {
 
