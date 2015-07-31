@@ -10,7 +10,7 @@ import com.ee.domain.contacts.Phone;
 //@Document(collection = "COMPANY")
 public abstract class AbstractCompany extends AbstractPersistentObject implements Company {
 
-//	private static final String FN_JSON_CONSTANT = "fn";
+//	private static final String FN_JSON_CONSTЕANT = "fn";
 //	private static final String FULL_NAME_JSON_CONSTANT = "fullName";
 //	
 //	private static final String SN_JSON_CONSTANT = "sn";

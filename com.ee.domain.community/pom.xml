@@ -1,0 +1,26 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.ee</groupId>
+		<artifactId>pom</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>domain.community</artifactId>
+	<name>com.ee.domain.community</name>
+	<dependencies>
+		<dependency>
+			<groupId>com.ee</groupId>
+			<artifactId>domain</artifactId>
+			<version>${project.version}</version>
+			<scope>jar</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.ee</groupId>
+			<artifactId>core.impl</artifactId>
+			<scope>compile</scope>
+			<type>jar</type>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+</project>

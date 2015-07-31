@@ -2,11 +2,10 @@ package com.ee.domain.delivery;
 
 import java.util.Date;
 
-import org.junit.runner.Describable;
-
+import com.ee.core.Descriptable;
 import com.ee.domain.contacts.Address;
 
-public interface RouteStopPoint extends Describable {
+public interface RouteStopPoint extends Descriptable {
 
 	public int getNumber();
 

@@ -9,7 +9,7 @@ import com.ee.domain.mongo.document.DefaultMongoDocument;
 import com.ee.domain.mongo.document.MongoDocument;
 import com.mongodb.gridfs.GridFSDBFile;
 
-public  class AbstractMongoAgreement extends
+public class AbstractMongoAgreement extends
 		AbstractAgreement<GridFSDBFile> implements MongoDocument {
 
 	private DefaultMongoDocument mongoDocument = new DefaultMongoDocument();
