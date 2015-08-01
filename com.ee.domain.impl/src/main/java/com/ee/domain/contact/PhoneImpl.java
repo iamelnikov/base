@@ -1,7 +1,7 @@
 package com.ee.domain.contact;
 
 import com.ee.domain.contacts.Phone;
-import com.ee.domain.person.Person;
+import com.ee.domain.person.PersonExtended;
 
 //@Document(collection = "PHONE")
 public class PhoneImpl extends AbstractContact implements Phone{
@@ -22,12 +22,12 @@ public class PhoneImpl extends AbstractContact implements Phone{
 	private String number;
 	private String description;
 	
-	public PhoneImpl(String type, String number, Person person) {
+	public PhoneImpl(String type, String number, PersonExtended person) {
 		super(type, person);
 		this.number = number;
 	}
 	
-	public PhoneImpl(String id, String type, String number, Person person) {
+	public PhoneImpl(String id, String type, String number, PersonExtended person) {
 		super(id, type, person);
 		this.number = number;
 	}

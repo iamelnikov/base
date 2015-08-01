@@ -3,7 +3,7 @@ package com.ee.domain.contact;
 import java.util.Locale;
 
 import com.ee.domain.contacts.Address;
-import com.ee.domain.person.Person;
+import com.ee.domain.person.PersonExtended;
 
 //@Document(collection = "LOCATION")
 public class AddressImpl extends AbstractContact implements Address {
@@ -40,7 +40,7 @@ public class AddressImpl extends AbstractContact implements Address {
 	protected String block;
 	protected double[] geoLocation;
 
-	public AddressImpl(String id, String type, Person person, String zipCode,
+	public AddressImpl(String id, String type, PersonExtended person, String zipCode,
 			String country, String region, String street, int house,
 			String building, String block, double[] geoLocation) {
 		super(id, type, person);
@@ -68,7 +68,7 @@ public class AddressImpl extends AbstractContact implements Address {
 		this.block = block;
 	}
 
-	public AddressImpl(String type, Person person, String zipCode,
+	public AddressImpl(String type, PersonExtended person, String zipCode,
 			String country, String region, String street, int house,
 			String building, String block, double[] geoLocation) {
 		super(type, person);

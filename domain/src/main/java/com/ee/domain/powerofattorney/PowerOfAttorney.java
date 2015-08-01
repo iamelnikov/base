@@ -4,7 +4,7 @@ import java.util.Date;
 
 import com.ee.core.PersistentObject;
 import com.ee.domain.document.Document;
-import com.ee.domain.person.Person;
+import com.ee.domain.person.PersonExtended;
 
 /**
  * 
@@ -20,9 +20,9 @@ public interface PowerOfAttorney<T> extends Document<T>,PersistentObject{
 	
 	/**
 	 * @return Инстанс класса Person - лицо, выдавшее доверенность
-	 * @see Person 
+	 * @see PersonExtended 
 	 */
-	public Person getIssuePerson();
+	public PersonExtended getIssuePerson();
 	/**
 	 * @return Date - дата выдачи доверенности
 	 */
@@ -33,9 +33,9 @@ public interface PowerOfAttorney<T> extends Document<T>,PersistentObject{
 	public Date getEndDate();
 	/**
 	 * @return Инстанс класса Person - доверенное лицо
-	 * @see Person
+	 * @see PersonExtended
 	 */
-	public Person getAuthorizedPerson();
+	public PersonExtended getAuthorizedPerson();
 	
 	/**
 	 * @return String - предмет доверенности

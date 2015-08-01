@@ -2,10 +2,10 @@ package com.ee.domain.community;
 
 import com.ee.domain.message.Message;
 
-public interface Comment<T, C> extends Message<C> {
+public interface Comment<T> extends Message<T> {
 
-	public T getTargetObject();
+	public String getTargetObjectId();
 	
-	public Comment<T, ?> getPreviousComment();
+	public Comment<?> getPreviousComment();
 	
 }

@@ -2,7 +2,7 @@ package com.ee.domain.contact;
 
 import com.ee.core.impl.AbstractPersistentObject;
 import com.ee.domain.contacts.Contact;
-import com.ee.domain.person.Person;
+import com.ee.domain.person.PersonExtended;
 
 public abstract class AbstractContact extends AbstractPersistentObject implements Contact{
 
@@ -12,7 +12,7 @@ public abstract class AbstractContact extends AbstractPersistentObject implement
 	protected boolean active = true;
 	protected boolean confirmed = true;
 	
-	public AbstractContact(String id, String type, Person person) {
+	public AbstractContact(String id, String type, PersonExtended person) {
 		super(id);
 		this.type = type;
 		this.contactInfo = getContactInfo(person);
@@ -24,7 +24,7 @@ public abstract class AbstractContact extends AbstractPersistentObject implement
 		this.contactInfo = contactInfo;
 	}
 	
-	public AbstractContact(String type, Person person) {
+	public AbstractContact(String type, PersonExtended person) {
 		super();
 		this.type = type;
 		this.contactInfo = getContactInfo(person);
@@ -36,7 +36,7 @@ public abstract class AbstractContact extends AbstractPersistentObject implement
 		this.contactInfo = contactInfo;
 	}
 	
-	protected String getContactInfo(Person person) {
+	protected String getContactInfo(PersonExtended person) {
 		if (person == null || person.getPersonalData()== null)
 			return null;
 		else

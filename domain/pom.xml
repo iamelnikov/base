@@ -29,5 +29,12 @@
 			<scope>compile</scope>
 			<type>jar</type>
 		</dependency>
+		<dependency>
+				<groupId>javax.validation</groupId>
+				<artifactId>validation-api</artifactId>
+				<version>1.0.0.GA</version>
+				<scope>provided</scope>
+				<type>jar</type>
+		</dependency>
 	</dependencies>
 </project>

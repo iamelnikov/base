@@ -7,6 +7,8 @@ import com.ee.domain.contacts.Address;
 
 public interface RouteStopPoint extends Descriptable {
 
+	public Route getRoute();
+	
 	public int getNumber();
 
 	public Address getAddress();
@@ -14,5 +16,8 @@ public interface RouteStopPoint extends Descriptable {
 	public Date getArrivalDate();
 
 	public Date getDepartureDate();
-
+	
+	public Date getPreferedArrivalDate();
+	
+	public void getAction(RouteStopPointAction actionObject);
 }

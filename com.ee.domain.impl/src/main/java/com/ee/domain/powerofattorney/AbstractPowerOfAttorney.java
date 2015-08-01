@@ -3,7 +3,7 @@ package com.ee.domain.powerofattorney;
 import java.util.Date;
 
 import com.ee.domain.document.AbstractDocumentImpl;
-import com.ee.domain.person.Person;
+import com.ee.domain.person.PersonExtended;
 
 /**
  * 
@@ -43,7 +43,7 @@ public abstract class AbstractPowerOfAttorney<T> extends AbstractDocumentImpl<T>
 	 */
 //	@JsonProperty(IP_JSON_CONSTANT)
 //	@Field(ISSUEPERSON_JSON_CONSTANT)
-	protected Person issuePerson;
+	protected PersonExtended issuePerson;
 
 	/**
 	 * Дата выдачи доверенности
@@ -57,7 +57,7 @@ public abstract class AbstractPowerOfAttorney<T> extends AbstractDocumentImpl<T>
 	 */
 //	@JsonProperty(AP_JSON_CONSTANT)
 //	@Field(AUTHORIZEDPERSON_JSON_CONSTANT)
-	protected Person authorizedPerson;
+	protected PersonExtended authorizedPerson;
 	
 	/**
 	 * Дата окончания действия доверенности
@@ -73,8 +73,8 @@ public abstract class AbstractPowerOfAttorney<T> extends AbstractDocumentImpl<T>
 //	@Field(SUBJECT_JSON_CONSTANT)
 	protected String subject;
 
-	public AbstractPowerOfAttorney(String id, String number, Person issuePerson,
-			Date issueDate, Person authorizedPerson, Date endDate, String subject) {
+	public AbstractPowerOfAttorney(String id, String number, PersonExtended issuePerson,
+			Date issueDate, PersonExtended authorizedPerson, Date endDate, String subject) {
 		super(id);
 		this.number = number;
 		this.issuePerson = issuePerson;
@@ -90,7 +90,7 @@ public abstract class AbstractPowerOfAttorney<T> extends AbstractDocumentImpl<T>
 	}
 
 	@Override
-	public Person getIssuePerson() {
+	public PersonExtended getIssuePerson() {
 		return issuePerson;
 	}
 
@@ -105,7 +105,7 @@ public abstract class AbstractPowerOfAttorney<T> extends AbstractDocumentImpl<T>
 	}
 
 	@Override
-	public Person getAuthorizedPerson() {
+	public PersonExtended getAuthorizedPerson() {
 		return authorizedPerson;
 	}
 
@@ -113,7 +113,7 @@ public abstract class AbstractPowerOfAttorney<T> extends AbstractDocumentImpl<T>
 		this.number = number;
 	}
 
-	public void setIssuePerson(Person issuePerson) {
+	public void setIssuePerson(PersonExtended issuePerson) {
 		this.issuePerson = issuePerson;
 	}
 
@@ -121,7 +121,7 @@ public abstract class AbstractPowerOfAttorney<T> extends AbstractDocumentImpl<T>
 		this.issueDate = issueDate;
 	}
 
-	public void setAuthorizedPerson(Person authorizedPerson) {
+	public void setAuthorizedPerson(PersonExtended authorizedPerson) {
 		this.authorizedPerson = authorizedPerson;
 	}
 

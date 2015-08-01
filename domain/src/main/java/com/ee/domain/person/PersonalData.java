@@ -37,7 +37,7 @@ public interface PersonalData extends PersistentObject {
 
 	public Date getBirthDate();
 
-	public String getGender();
+	public int getGender();
 
 	public String getBirthPlace();
 }

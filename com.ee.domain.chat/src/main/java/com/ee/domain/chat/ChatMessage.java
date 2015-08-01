@@ -13,6 +13,6 @@ public interface ChatMessage<T> extends Message<T> {
 
 	public String getSenderId();
 
-	public void markAsFavorite();
+	public void markAsFavorite(String userId);
 	
 }

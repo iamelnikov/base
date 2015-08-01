@@ -1,56 +1,56 @@
 package com.ee.domain.person;
 
-import java.util.Date;
+import java.util.List;
 
-import com.ee.domain.person.Person;
-import com.ee.domain.person.PersonalData;
+import com.ee.core.impl.AbstractPersistentObject;
+import com.ee.core.impl.CollectionTools;
+import com.ee.domain.contacts.Contact;
 
-public abstract class AbstractPerson<T extends PersonalData> implements
+public abstract class AbstractPerson extends AbstractPersistentObject implements
 		Person {
 
-	protected String lastName;
-	protected String firstName;
-	protected String middleName;
-	protected Date birthDate;
-	protected int gender;
-	protected String birthPlace;
-	protected T personalData;
+	protected PersonalData personalData;
+	protected List<Contact> contactList;
 
-	public AbstractPerson(T personalData) {
+	public AbstractPerson() {
+		super();
+	}
+
+	public AbstractPerson(String id) {
+		super(id);
+	}
+
+	public AbstractPerson(PersonalData personalData) {
+		super();
 		this.personalData = personalData;
 	}
 
-	public T getPersonalData() {
-		return this.personalData;
-	}
-
-	public void setPersonData(T personalData) {
+	public AbstractPerson(String id, PersonalData personalData) {
+		super(id);
 		this.personalData = personalData;
 	}
 
-
-	public String getBirthPlace(){
-		return birthPlace;
+	@Override
+	public PersonalData getPersonalData() {
+		return personalData;
 	}
 
-
-	public String getFirstName() {
-		return firstName;
+	@Override
+	public List<Contact> getContacts() {
+		return contactList;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public void addContact(Contact contact) {
+		assert contact != null;
+		CollectionTools.initListAsArrayListIfNull(contactList);
+		assert contactList != null;
+		contactList.add(contact);
+	}
+	
+	public void removeContact(Contact contact) {
+		assert contact != null;
+		if (contactList!=null)
+			contactList.remove(contact);
 	}
 
-	public String getMiddleName() {
-		return middleName;
-	}
-
-	public Date getBirthDate() {
-		return birthDate;
-	}
-
-	public int getGender() {
-		return gender;
-	};
 }

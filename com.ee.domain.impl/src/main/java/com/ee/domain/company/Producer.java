@@ -1,11 +1,7 @@
 package com.ee.domain.company;
 
-import java.util.LinkedHashSet;
-import java.util.List;
 import java.util.Set;
 
-import com.ee.domain.contacts.Address;
-import com.ee.domain.contacts.Phone;
 import com.ee.domain.product.Product;
 import com.ee.domain.request.AbstractProductOffer;
 import com.ee.domain.user.User;
@@ -29,13 +25,22 @@ public class Producer extends AbstractCompany {
 //	@DBRef
 	private Set<AbstractProductOffer> offers;
 
-	public Producer(String id, String friendlyName, String fullName,
-			String shortName, Address legalAddress, Address actualAddress,
-			List<Phone> phoneList, String website, int industry) {
-		super(id, friendlyName, fullName, shortName, legalAddress,
-				actualAddress, phoneList, website, industry);
-		this.products = new LinkedHashSet<Product>();
-		this.employees = new LinkedHashSet<User>();
+	public Producer(String fullName, String shortName,
+			CompanyRequisits requisits, CompanyContacts contacts) {
+		super(fullName, shortName, requisits, contacts);
+	}
+
+	public Producer(String id, String fullName, String shortName,
+			CompanyRequisits requisits, CompanyContacts contacts) {
+		super(id, fullName, shortName, requisits, contacts);
+	}
+
+	public Producer(String id, String fullName, String shortName) {
+		super(id, fullName, shortName);
+	}
+
+	public Producer(String fullName, String shortName) {
+		super(fullName, shortName);
 	}
 
 	public void addProduct(Product product) {

@@ -4,13 +4,15 @@ import java.util.Date;
 
 import com.ee.core.PersistentObject;
 
-public interface Message<T> extends PersistentObject {
+public interface Message<T> {
 	
 	public T getContent();
+	
+	public String getPublisherId();
 
-	public Date getCreationDate();
+	public Date getPublishDate();
 
-	public boolean wasModified();
+	public boolean isModified();
 
 	public Date getModifyDate();
 	

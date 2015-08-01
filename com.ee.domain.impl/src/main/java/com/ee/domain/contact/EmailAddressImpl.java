@@ -1,7 +1,7 @@
 package com.ee.domain.contact;
 
 import com.ee.domain.contacts.EmailAddress;
-import com.ee.domain.person.Person;
+import com.ee.domain.person.PersonExtended;
 
 //@Document(collection = "EMAIL")
 public class EmailAddressImpl extends AbstractContact implements EmailAddress {
@@ -29,12 +29,12 @@ public class EmailAddressImpl extends AbstractContact implements EmailAddress {
 	private String emailAddress;
 	private String description;
 
-	public EmailAddressImpl(String type, String emailAddress, Person person) {
+	public EmailAddressImpl(String type, String emailAddress, PersonExtended person) {
 		super(type, person);
 		this.emailAddress = emailAddress;
 	}
 	
-	public EmailAddressImpl(String id, String type, String emailAddress, Person person) {
+	public EmailAddressImpl(String id, String type, String emailAddress, PersonExtended person) {
 		super(id, type, person);
 		this.emailAddress = emailAddress;
 	}

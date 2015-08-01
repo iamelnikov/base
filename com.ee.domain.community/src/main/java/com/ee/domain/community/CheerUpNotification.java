@@ -1,10 +1,12 @@
 package com.ee.domain.community;
 
+import com.ee.core.impl.AbstractPersistentObject;
 
-public class CheerUpNotification extends SystemObject
+/**
+ * Подбадривающая нотификация
+ * @author Ilya A Melnikov
+ *
+ */
+public class CheerUpNotification extends AbstractPersistentObject
 {
-	private int notificationType;
-	
-	private String data;
-	
 }

@@ -1,5 +1,6 @@
 package com.ee.core;
 
+
 public interface PersistentObject {
 
 	public String getId();
