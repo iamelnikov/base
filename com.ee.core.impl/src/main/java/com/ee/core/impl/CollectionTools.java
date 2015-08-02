@@ -1,11 +1,13 @@
 package com.ee.core.impl;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.function.Predicate;
 
 @SuppressWarnings("rawtypes")
 public class CollectionTools {
@@ -33,7 +35,7 @@ public class CollectionTools {
 	}
 	
 	public static void initMapIfNull(Map<?, ?> map,
-			Class<? extends Map<?, ?>> targetMapClass) {
+			Class<? extends Map> targetMapClass) {
 		initCollectionIfNull(map, targetMapClass);
 	}
 	
@@ -48,5 +50,12 @@ public class CollectionTools {
 		}
 	}
 
+	public static <T> void removeObjectFromCollection(Collection<T> col, Predicate<T> filter) {
+		if (col!=null) {
+			final T object = col.stream().filter(filter).findFirst().get();
+			if (object!=null)
+				col.remove(object);
+		}
+	}
 
 }

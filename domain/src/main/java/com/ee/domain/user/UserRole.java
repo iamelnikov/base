@@ -4,5 +4,4 @@ import com.ee.core.PersistentObject;
 
 public interface UserRole extends PersistentObject{
 	public String getName();
-	
 }

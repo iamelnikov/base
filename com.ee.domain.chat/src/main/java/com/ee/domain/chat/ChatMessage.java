@@ -5,14 +5,10 @@ import com.ee.domain.message.Message;
 
 public interface ChatMessage<T> extends Message<T> {
 
-	public String getChatId();
+	public T getChat();
 	
-	public Chat getChat();
+	public void checkAsFavorite(String userId);
 	
-	public ChatParticipant<?> getSender();
-
-	public String getSenderId();
-
-	public void markAsFavorite(String userId);
+	public void uncheckAsFavorite(String userId);
 	
 }

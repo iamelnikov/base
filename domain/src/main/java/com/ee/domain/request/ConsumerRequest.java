@@ -10,7 +10,5 @@ public interface ConsumerRequest extends PersistentObject, Descriptable {
 
 	public void close();
 
-	public String getProductName(); 
-
-
+	public String getProductName();
 }
